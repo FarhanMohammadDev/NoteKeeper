@@ -19,9 +19,17 @@ const DataController = {
     }cacth(err){
       console.log(err);
     }
-  }
+  },
 
-  
+  updateData: async (req, res) => {
+    try {
+      const {id} = req.params
+      const updateNote = await Notes.findByIdAndUpdate(id , req.body)
+      res.status(200).json(updateNote)
+    } catch (error) {
+      res.status(400).json({message: error})
+    }
+  }
 }
 
 module.exports = DataController;
