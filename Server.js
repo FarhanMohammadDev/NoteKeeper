@@ -1,10 +1,12 @@
 /* eslint-disable no-undef */
 const express = require('express');
-const {connectDB } = require('./config/db');
+const connexion = require("./config/db")
 const app = express();
-
+const noteRouter = require("./routes/NoteRoutes")
 app.use(express.json());
-connectDB() 
+
+
+app.use('/api', noteRouter)
 // Start the server
 const Port = 4000;
 app.listen(Port, () => {
