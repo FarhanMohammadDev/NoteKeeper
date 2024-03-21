@@ -12,6 +12,15 @@ const DataController = {
     }
   },
 
+  getAll: async (req, res) => {
+    try{
+      const fetchedData = await Notes.find()
+      res.status(200).json(fetchedData)
+    }cacth(err){
+      console.log(err);
+    }
+  }
+
   
 }
 
