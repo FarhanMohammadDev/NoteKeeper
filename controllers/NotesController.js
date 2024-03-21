@@ -29,6 +29,16 @@ const DataController = {
     } catch (error) {
       res.status(400).json({message: error})
     }
+  },
+
+  deleteData: async (req, res) => {
+    try {
+      const {id} = req.params;
+      const deletedNote = await Notes.findByIdAndDelete(id)
+      res.status(200).json(deletedNote)
+    } catch (error) {
+      res.status(400).jso({message : error})
+    }
   }
 }
 
