@@ -19,7 +19,7 @@ To get started with NoteKeeper, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/notekeeper.git
+   git clone [https://github.com/your-username/notekeeper.git](https://github.com/FarhanMohammadDev/NoteKeeper.git)
 ## Install dependencies:
 cd notekeeper
 npm install
