@@ -9,7 +9,10 @@
   "scripts": {
     "start": "nodemon Server.js",
     "test": "jest"
+    },
+
   },
+
   "devDependencies": {
     "@babel/core": "^7.24.3",
     "@babel/preset-env": "^7.24.3",
